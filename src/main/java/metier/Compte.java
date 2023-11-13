@@ -1,11 +1,20 @@
 package metier;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlTransient;
+
 import java.util.*;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Compte {
         // Données d'un compte
         private int code;
         private double solde;
+
+        @XmlTransient
         private Date dateCreation;
 
         // Constructeur avec paramètres
